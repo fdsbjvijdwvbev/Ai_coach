@@ -286,19 +286,37 @@ const WebSocket = require("ws");
 const express = require("express");
 const speech = require("@google-cloud/speech");
 const axios = require("axios");
+const dotenv = require("dotenv");
 const mysql = require("mysql2");
+require("dotenv").config();
+
 
 const app = express();
 const PORT = 3000;
 const server = app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
-const db = mysql.createConnection({
-    host: "localhost", // Change if using a remote database
-    user: "root",
-    password: "", // Change to your DB password
-    database: "ai_coach" // Change to your DB name
+const db = mysql.createPool({
+    host: process.env.DB_HOST,  // ✅ Google Cloud SQL Public IP
+    user: process.env.DB_USER,  // ✅ Your database username
+    password: process.env.DB_PASSWORD,  // ✅ Your database password
+    database: process.env.DB_NAME,  // ✅ Your database name
+    port: 3306,  // ✅ MySQL default port
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
+
+// ✅ Test Database Connection
+db.getConnection((err, connection) => {
+    if (err) {
+        console.error("❌ Database Connection Failed:", err);
+        return;
+    }
+    console.log("✅ Connected to Google Cloud MySQL!");
+    connection.release();
+});
+
 
 // ✅ API to Get 4 Random Topics
 app.get("/api/topics", (req, res) => {
@@ -321,7 +339,7 @@ const client = new speech.SpeechClient({
 });
 
 // ✅ Mistral AI API Configuration (STREAMING)
-const MISTRAL_API_KEY = "d5F1b9ljF9HUg1PfL8GzOrHV70gF59jm"; // Replace with actual API key
+ // Replace with actual API key
 const MISTRAL_API_URL = "https://api.mistral.ai/v1/chat/completions";
 
 // ✅ Default AI Role
@@ -359,7 +377,7 @@ async function streamAIResponse(ws, userMessage) {
             },
             {
                 headers: {
-                    "Authorization": `Bearer ${MISTRAL_API_KEY}`,
+                    "Authorization": `Bearer ${process.env.MISTRAL_API_KEY}`,
                     "Content-Type": "application/json",
                 },
                 responseType: "stream",
