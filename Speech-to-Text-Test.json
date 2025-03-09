@@ -1,0 +1,19 @@
+{
+  "type": "service_account",
+  "project_id": "sdgp-stt",
+  "private_key_id": "163d1e5e9672f0e228d47175601ffd8f711c1918",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDIyo84cmScLklt\n/WDUpQVXRAE2Zs4x2tPSVGzvWbemufr90wuQi/BQGWtctdsr4yissItk7PfPPL2q\nm0My60pOzCaHCepFu028c1eQqL2+vwT0M7G/lqGqJdgCDgJ/+uyfxVpxSUxb6h6U\nUJiVJcnB/2jq9RB25YIjyXr9/QscEjIIc1Gs/eRUzRu/YXg3sW1ai0hIC+AAhZLc\n8LxMfDZNLNI7g2+STTsTmaJVPdCRMWhl2wANyelZJUqTAWCIyMaJn6iK2DI2ANmc\n0pJdJdEH9AfIwJ+EES5oA8HHMULAjMsROOEgqbC/bvKVfZNWVS4QWYtW0dZ2KaVE\nenFmedM/AgMBAAECggEAEYpIWpj7mv0cIwSYWdsUjVv+cx8l8gr4qA4B+iKvPVxP\nxa6S+wyOcKDX1SB5xeqxGezOMIHW3/6hXu7zPtZ5BkslLnS6R18mWkkFJDjpYmlT\naHW/mEnzU2a86OkKZN2poAdgcDcD+Z+JDlHAEn9bkZvbMXM4/fnslW27VcauGsSA\nRp8wQq6kqvFHiwZMIYTRQpEwdv4Y4NoJlYf68u7dwB24zt57yWEDVbeJxUVOGN2/\n7kVEIjDCJ/nocRng8J4Z4ucOQxkQ8SN6vzYcbvl5wawhDRlrVpLEyiqy2h9MUn19\n4ZQhyKY6zJsdMuoBM2Z72aPjzqPSMIe9XIvnVTZ24QKBgQD99Jj1lxW85PhDBiUb\nf8VAuXbKMIcMfxF40yT4wAcaG8rEvrmEcVRgqNHufNW14vXgcw0908A9WvXqsQ3h\ncCsICNorYitNV6TwtYhQ4RR7lTOo51tVByLbfytAI1yTbhOt3p9Bk8yPfgpqqp8n\ngewl3y2v6k5NN6idHb4HldL6jwKBgQDKaGP04u9LATS9s5Bge5pPFpLyyvwAInrs\nfeYJFg6t9+bRfyVJ+lil40BHuu9xjnI6XXFm2ecirnQKNMBLbUMU++CrQR7UOZsZ\nTNjINemA81DFfmrzSrW935zDyH3ID0XlvxkA3MVdlbszFvMqFDCLVsoK+mowjmo7\nP8Pi5rS0UQKBgEVB/KkVkB8Yzr/woBQUz2WsbsILY/k7ejdaVf3k2Mr9A1qOrSd6\nhMlroP0KXHojMG0K03SmGApjkSd1K9Tscz/Ysi8csbSBD4F58HgmOiDN+u24Usco\nkBAOaWwveKLYZVOIoCQRO7tyY0Ldz1PF8fIOIHaWTs5uPHTE1Lta19PvAoGAMZzk\n42G8xeXFx7n76apiaIBgBKM8ocvR1aYGfLOrZXkeWruPqFJ06DSLzQlFJ9CCr0u4\nQD2pKhcY2meTuulNSBd1OoT7yYlVOx5bBLgyRClf4wjZrkjhw2jMRDEgo6kauPXe\naxeySP4qpJs7f1TzkTP00jwPS1edMmiu2y8xnAECgYBFkPM/5+nIkty+I0ElcfKp\nMxlSWAx0lktrBZrRjRHyDIL9LLH0uk1rxBaXdQQtD2GrsOZ3LoqqFqRlruC6GASV\nqaX2ElEeCIYJEd9g7GbEf7I3XxELOUW+Nau2HMmlyS5on27mLAst1M2Ca7a8qiBY\nn6D8svA2eWW2aVIJEEX70g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "speechttexttest@sdgp-stt.iam.gserviceaccount.com",
+  "client_id": "101025441684538117080",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speechttexttest%40sdgp-stt.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node src/index.js",
+    "build": "rimraf ./build"
+  }
+}
+
